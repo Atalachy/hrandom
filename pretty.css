@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+.light{
+    --text: black;
+    --bg: white;
+    --second-bg: #ebebeb;
+    --button-bg-hover: #e5e5e5;
+    --button-border: rgba(0, 0, 0, 0.1);
+}
+
+.dark{
+    --text: white;
+    --bg: #202020;
+    --second-bg: #181818;
+    --button-bg-hover: #292929;
+    --button-border: rgba(255, 255, 255, 0.1);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+    position: sticky;
+    top: 0px;
+    background-color: var(--second-bg);
+    transition: background 0.5s cubic-bezier(0.05, 0, 0, 1);
+}
+
+.is-inViewport {
+    background-color: transparent;
+}
+
+header .title{
+    margin: 0;
+    font-size: 1.5em;
+    margin-left: 1.5em;
+}
+
+header .settings{
+    margin: 0;
+    margin-right: 2em;
+    margin-top: 0.5em;
+    position: relative;
+}
+
+header .settings:hover{
+    cursor: pointer;
+}
+
+header .dropmenu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    min-width: 200px;
+    background-color: var(--second-bg);
+    border: 0.5px solid var(--button-border);
+    right: 0.1em;
+    border-radius: 5px;
+    padding: 15px 0px;
+    cursor: default;
+}
+
+header .dropmenu p{
+    margin: 0;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    margin-left: 10%;
+}
+
+header .dropmenu div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+    transition: background 0.5s cubic-bezier(0.05, 0, 0, 1);
+}
+
+header .dropmenu div:hover{
+    cursor: pointer;
+    background-color: var(--button-bg-hover);
+}
+
+header .dropmenu div svg{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+header .dropmenu{
+    display: none;
+}
+
+.checkbox .on{
+    display: none;
+}
+
+.checkbox .off{
+    display: flex;
+}
+
+.active .on{
+    display: flex;
+}
+
+.active .off{
+    display: none;
+}
+
+h1{
+    font-size: 4em;
+    margin: 0;
+}
+
+#display{
+    display: flex;
+    flex-direction: row;   
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15em;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    padding: 15px;
+    background-color: var(--second-bg);
+    border: 0.5px solid var(--button-border);
+    transition: background 0.5s cubic-bezier(0.05, 0, 0, 1);
+    margin: 5px;
+    border-radius: 5px;
+    color: var(--text);
+    text-decoration: none;
+    max-width: 110px;
+    overflow: hidden;
+}
+
+.button p{
+    margin: 0;
+}
+
+.button .website-img{
+    margin-top: 10px;
+    width: 110px;
+    height: 110px;
+    border-radius: 2px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: var(--button-bg-hover);
+}
